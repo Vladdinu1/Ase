@@ -1,0 +1,264 @@
+/* Definirea paletei de culori din imagine */
+:root {
+    --pink: #FE14BB;
+    --navy: #17117D;
+    --purple: #C401DB;
+    --orange: #DE6904;
+    --beige: #EAD7D1;
+    --black: #000000;
+    --light-bg: #FFF0FB;
+}
+
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--navy);
+}
+
+
+.header {
+    background-color: var(--navy);
+    padding: 1.5rem 2rem;
+}
+
+.container.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo, #lg {
+    color: var(--light-bg);
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#nav-menu a {
+    color: var(--beige);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+#nav-menu a:hover {
+    color: var(--pink);
+}
+
+.nav-cta {
+    background-color: var(--pink);
+    color: var(--black) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.nav-cta:hover {
+    background-color: var(--purple);
+    color: var(--light-bg) !important;
+}
+
+
+.share-btn-top-right {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10000;
+    background-color: var(--pink);
+    color: var(--light-bg);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.share-btn-top-right:hover {
+    background-color: var(--purple);
+    transform: scale(1.05);
+}
+
+
+section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    background-color: var(--navy);
+    border-radius: 12px;
+    color: var(--light-bg);
+    text-align: center;
+    padding: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.petreceri1, .even {
+    background-color: var(--purple);
+    border: 4px solid var(--navy);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--black);
+    padding: 2rem;
+    list-style-type: none;
+}
+
+.even {
+    margin-top: 2rem;
+}
+
+
+#t1, #t2, #t3, #t4, #t5,
+#tema1, #tema2, #tema3, #tema4, #tema5 {
+    background-color: var(--light-bg);
+    color: var(--navy);
+    border-left: 6px solid var(--navy);
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+#evenimente, #echipa, #inscriere, #contact {
+    font-size: 1.2rem;
+}
+
+
+.team-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.team-section h2 {
+    background-color: transparent;
+    color: var(--navy);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.team-card {
+    background-color: var(--beige);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--purple);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--pink);
+    background-color: var(--light-bg);
+}
+
+.team-card h3 {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    color: var(--black);
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+}
+
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.butoane-de-contact { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 2rem; 
+    margin-top: 2rem; 
+}
+
+.contact-link { 
+    text-decoration: none; 
+    color: var(--navy); 
+    display: block; 
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid transparent; 
+    border-color: var(--navy); 
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.contact-link:hover { 
+    border-color: var(--pink); 
+    background-color: var(--light-bg); 
+    transform: translateY(-3px);
+}
+
+.icon { 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+
+.footer { 
+    padding: 2rem; 
+    text-align: center; 
+    background-color: var(--navy); 
+    color: var(--beige); 
+    margin-top: 3rem; 
+}
+
+.footer p {
+    color: var(--beige);
+    font-size: 1rem;
+    margin: 0;
+}
